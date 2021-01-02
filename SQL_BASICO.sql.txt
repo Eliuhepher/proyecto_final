@@ -1,0 +1,26 @@
+
+-- PARA CONSULTAR SELECT * FROM [NOMBRE DE LA TABLA]
+SELECT * FROM tb_alumnos 
+
+--SELECT CON CULUMNAS ESPECIFICAS SELECT [NOMBRES DE LAS COLUMNAS] FROM [NOMBRE DE LA TABLA]
+
+SELECT no_boleta,nombre_escuela, nombre_carrera from tb_alumnos
+
+-- SELECT CON UN REGISTRO EN ESPECÍFICO SELECT * FROM [NOMBRE DE LA TABLA] WHERE [CONDICION]
+SELECT * FROM tb_alumnos where no_boleta = '2018640408'
+
+-- PARA AÑADIR NUEVOS REGISTROS INSERT INTO [NOMBRE DE LA TABLA] [CAMPOS A INSERTAR] VALUES ([VALORES A INSERTAR])
+ INSERT INTO tb_alumnos (no_boleta,nombre_escuela, nombre1,nombre2,apellido_paterno, apellido_materno,email,telefono, nombre_carrera)
+ values ('2018640408', 'UPIITA', 'ELIU', 'HEPHER', 'GUTIERREZ', 'HERNANDEZ', 'eliu.hepher@gmail.com', '5591665652', 'ING. MECATRONICA')
+
+
+ -- ACTUALIZANDO UN REGISTRO UPDATE [NOMBRE DE LA TABLA] SET [NOMBRE DEL CAMPO A ACTUALIZAR] WHERE [CONDICION]
+ update tb_alumnos
+ set email = 'eliu.hepher@gmail.com'
+ where no_boleta = '2018640408'
+
+ -- BORRADO DE UN REGISTRO DELETE FROM [NOMBRE DE LA TABLA] WHERE [CONDICION]
+
+ DELETE FROM tb_alumnos
+ WHERE no_boleta = '2018640408'
+
